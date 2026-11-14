@@ -1,0 +1,400 @@
+---
+manufacturer: ADVA
+model: F7/48CSM/1HU-19600-19130
+slug: adva-f7-48csm-1hu-19600-19130
+part_number: 1078708781-01
+u_height: 1
+is_full_depth: false
+is_powered: false
+airflow: passive
+front-ports:
+  - name: C1
+    type: lc
+    label: ITU 60
+    positions: 1
+  - name: C2
+    type: lc
+    label: ITU 59
+    positions: 1
+  - name: C3
+    type: lc
+    label: ITU 58
+    positions: 1
+  - name: C4
+    type: lc
+    label: ITU 57
+    positions: 1
+  - name: C5
+    type: lc
+    label: ITU 56
+    positions: 1
+  - name: C6
+    type: lc
+    label: ITU 55
+    positions: 1
+  - name: C7
+    type: lc
+    label: ITU 54
+    positions: 1
+  - name: C8
+    type: lc
+    label: ITU 53
+    positions: 1
+  - name: C9
+    type: lc
+    label: ITU 52
+    positions: 1
+  - name: C10
+    type: lc
+    label: ITU 51
+    positions: 1
+  - name: C11
+    type: lc
+    label: ITU 50
+    positions: 1
+  - name: C12
+    type: lc
+    label: ITU 49
+    positions: 1
+  - name: C13
+    type: lc
+    label: ITU 48
+    positions: 1
+  - name: C14
+    type: lc
+    label: ITU 47
+    positions: 1
+  - name: C15
+    type: lc
+    label: ITU 46
+    positions: 1
+  - name: C16
+    type: lc
+    label: ITU 45
+    positions: 1
+  - name: C17
+    type: lc
+    label: ITU 44
+    positions: 1
+  - name: C18
+    type: lc
+    label: ITU 43
+    positions: 1
+  - name: C19
+    type: lc
+    label: ITU 42
+    positions: 1
+  - name: C20
+    type: lc
+    label: ITU 41
+    positions: 1
+  - name: C21
+    type: lc
+    label: ITU 40
+    positions: 1
+  - name: C22
+    type: lc
+    label: ITU 39
+    positions: 1
+  - name: C23
+    type: lc
+    label: ITU 38
+    positions: 1
+  - name: C24
+    type: lc
+    label: ITU 37
+    positions: 1
+  - name: C25
+    type: lc
+    label: ITU 36
+    positions: 1
+  - name: C26
+    type: lc
+    label: ITU 35
+    positions: 1
+  - name: C27
+    type: lc
+    label: ITU 34
+    positions: 1
+  - name: C28
+    type: lc
+    label: ITU 33
+    positions: 1
+  - name: C29
+    type: lc
+    label: ITU 32
+    positions: 1
+  - name: C30
+    type: lc
+    label: ITU 31
+    positions: 1
+  - name: C31
+    type: lc
+    label: ITU 30
+    positions: 1
+  - name: C32
+    type: lc
+    label: ITU 29
+    positions: 1
+  - name: C33
+    type: lc
+    label: ITU 28
+    positions: 1
+  - name: C34
+    type: lc
+    label: ITU 27
+    positions: 1
+  - name: C35
+    type: lc
+    label: ITU 26
+    positions: 1
+  - name: C36
+    type: lc
+    label: ITU 25
+    positions: 1
+  - name: C37
+    type: lc
+    label: ITU 24
+    positions: 1
+  - name: C38
+    type: lc
+    label: ITU 23
+    positions: 1
+  - name: C39
+    type: lc
+    label: ITU 22
+    positions: 1
+  - name: C40
+    type: lc
+    label: ITU 21
+    positions: 1
+  - name: C41
+    type: lc
+    label: ITU 20
+    positions: 1
+  - name: C42
+    type: lc
+    label: ITU 19
+    positions: 1
+  - name: C43
+    type: lc
+    label: ITU 18
+    positions: 1
+  - name: C44
+    type: lc
+    label: ITU 17
+    positions: 1
+  - name: C45
+    type: lc
+    label: ITU 16
+    positions: 1
+  - name: C46
+    type: lc
+    label: ITU 15
+    positions: 1
+  - name: C47
+    type: lc
+    label: ITU 14
+    positions: 1
+  - name: C48
+    type: lc
+    label: ITU 13
+    positions: 1
+rear-ports:
+  - name: Network
+    type: lc
+    positions: 48
+    label: N T/R
+port-mappings:
+  - front_port: C1
+    front_port_position: 1
+    rear_port: Network
+    rear_port_position: 1
+  - front_port: C2
+    front_port_position: 1
+    rear_port: Network
+    rear_port_position: 2
+  - front_port: C3
+    front_port_position: 1
+    rear_port: Network
+    rear_port_position: 3
+  - front_port: C4
+    front_port_position: 1
+    rear_port: Network
+    rear_port_position: 4
+  - front_port: C5
+    front_port_position: 1
+    rear_port: Network
+    rear_port_position: 5
+  - front_port: C6
+    front_port_position: 1
+    rear_port: Network
+    rear_port_position: 6
+  - front_port: C7
+    front_port_position: 1
+    rear_port: Network
+    rear_port_position: 7
+  - front_port: C8
+    front_port_position: 1
+    rear_port: Network
+    rear_port_position: 8
+  - front_port: C9
+    front_port_position: 1
+    rear_port: Network
+    rear_port_position: 9
+  - front_port: C10
+    front_port_position: 1
+    rear_port: Network
+    rear_port_position: 10
+  - front_port: C11
+    front_port_position: 1
+    rear_port: Network
+    rear_port_position: 11
+  - front_port: C12
+    front_port_position: 1
+    rear_port: Network
+    rear_port_position: 12
+  - front_port: C13
+    front_port_position: 1
+    rear_port: Network
+    rear_port_position: 13
+  - front_port: C14
+    front_port_position: 1
+    rear_port: Network
+    rear_port_position: 14
+  - front_port: C15
+    front_port_position: 1
+    rear_port: Network
+    rear_port_position: 15
+  - front_port: C16
+    front_port_position: 1
+    rear_port: Network
+    rear_port_position: 16
+  - front_port: C17
+    front_port_position: 1
+    rear_port: Network
+    rear_port_position: 17
+  - front_port: C18
+    front_port_position: 1
+    rear_port: Network
+    rear_port_position: 18
+  - front_port: C19
+    front_port_position: 1
+    rear_port: Network
+    rear_port_position: 19
+  - front_port: C20
+    front_port_position: 1
+    rear_port: Network
+    rear_port_position: 20
+  - front_port: C21
+    front_port_position: 1
+    rear_port: Network
+    rear_port_position: 21
+  - front_port: C22
+    front_port_position: 1
+    rear_port: Network
+    rear_port_position: 22
+  - front_port: C23
+    front_port_position: 1
+    rear_port: Network
+    rear_port_position: 23
+  - front_port: C24
+    front_port_position: 1
+    rear_port: Network
+    rear_port_position: 24
+  - front_port: C25
+    front_port_position: 1
+    rear_port: Network
+    rear_port_position: 25
+  - front_port: C26
+    front_port_position: 1
+    rear_port: Network
+    rear_port_position: 26
+  - front_port: C27
+    front_port_position: 1
+    rear_port: Network
+    rear_port_position: 27
+  - front_port: C28
+    front_port_position: 1
+    rear_port: Network
+    rear_port_position: 28
+  - front_port: C29
+    front_port_position: 1
+    rear_port: Network
+    rear_port_position: 29
+  - front_port: C30
+    front_port_position: 1
+    rear_port: Network
+    rear_port_position: 30
+  - front_port: C31
+    front_port_position: 1
+    rear_port: Network
+    rear_port_position: 31
+  - front_port: C32
+    front_port_position: 1
+    rear_port: Network
+    rear_port_position: 32
+  - front_port: C33
+    front_port_position: 1
+    rear_port: Network
+    rear_port_position: 33
+  - front_port: C34
+    front_port_position: 1
+    rear_port: Network
+    rear_port_position: 34
+  - front_port: C35
+    front_port_position: 1
+    rear_port: Network
+    rear_port_position: 35
+  - front_port: C36
+    front_port_position: 1
+    rear_port: Network
+    rear_port_position: 36
+  - front_port: C37
+    front_port_position: 1
+    rear_port: Network
+    rear_port_position: 37
+  - front_port: C38
+    front_port_position: 1
+    rear_port: Network
+    rear_port_position: 38
+  - front_port: C39
+    front_port_position: 1
+    rear_port: Network
+    rear_port_position: 39
+  - front_port: C40
+    front_port_position: 1
+    rear_port: Network
+    rear_port_position: 40
+  - front_port: C41
+    front_port_position: 1
+    rear_port: Network
+    rear_port_position: 41
+  - front_port: C42
+    front_port_position: 1
+    rear_port: Network
+    rear_port_position: 42
+  - front_port: C43
+    front_port_position: 1
+    rear_port: Network
+    rear_port_position: 43
+  - front_port: C44
+    front_port_position: 1
+    rear_port: Network
+    rear_port_position: 44
+  - front_port: C45
+    front_port_position: 1
+    rear_port: Network
+    rear_port_position: 45
+  - front_port: C46
+    front_port_position: 1
+    rear_port: Network
+    rear_port_position: 46
+  - front_port: C47
+    front_port_position: 1
+    rear_port: Network
+    rear_port_position: 47
+  - front_port: C48
+    front_port_position: 1
+    rear_port: Network
+    rear_port_position: 48
