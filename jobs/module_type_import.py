@@ -11,10 +11,9 @@ import os
 import re
 import yaml
 import shutil
-from nautobot.dcim.models import (
-    Manufacturer, ModuleType, InterfaceTemplate, ConsolePortTemplate, ConsoleServerPortTemplate,
-    PowerPortTemplate, PowerOutletTemplate, FrontPortTemplate, RearPortTemplate
-)
+from nautobot.dcim.models import Manufacturer, ModuleType
+
+from .component_sync import sync_component_templates
 from nautobot.extras.models import ImageAttachment
 from django.core.files.base import File
 from django.db import transaction
@@ -197,37 +196,9 @@ class SyncModuleTypes(Job):
         return module_type
 
     def _process_module_components(self, module_type, module_data, debug_mode=False):
-        """Process module components like interfaces, ports, etc."""
-        def process_component(component_list, component_model, fields, fk_field="module_type", defaults=None):
-            """Generic function to process different module components"""
-            if defaults is None:
-                defaults = {}
-            filter_kwargs = {fk_field: module_type}
-            component_model.objects.filter(**filter_kwargs).delete()
-            for item in module_data.get(component_list, []):
-                valid_data = {field: item.get(field, None) for field in fields if field in item}
-                # Apply defaults for missing fields
-                for field, default_value in defaults.items():
-                    if field not in valid_data or valid_data[field] is None:
-                        valid_data[field] = default_value
-                valid_data[fk_field] = module_type
-                # Filter out any fields that are not in the fields list or defaults to avoid keyword argument errors
-                allowed_fields = fields + [fk_field] + list(defaults.keys())
-                filtered_data = {k: v for k, v in valid_data.items() if k in allowed_fields}
-                
-                # Create the component object
-                component_model.objects.create(**filtered_data)
-            self.logger.info(f"Processed {component_list} for {module_data['model']}.")
-
-        # Define valid fields for each model with the correct foreign key
-        process_component("interfaces", InterfaceTemplate, ["name", "type", "label", "description", "mgmt_only"])
-        process_component("console-ports", ConsolePortTemplate, ["name", "type", "label", "description"])
-        process_component("console-server-ports", ConsoleServerPortTemplate, ["name", "type", "label", "description"])
-        # PowerPortTemplate not supported for ModuleType in this Nautobot version
-        # process_component("power-ports", PowerPortTemplate, ["name", "type", "maximum_draw", "allocated_draw"], defaults={"power_factor": 1.0})
-        process_component("power-outlets", PowerOutletTemplate, ["name", "type", "power_port", "feed_leg", "label", "description"])
-        process_component("front-ports", FrontPortTemplate, ["name", "type", "rear_port", "rear_port_position", "label", "description"])
-        process_component("rear-ports", RearPortTemplate, ["name", "type", "positions", "label", "description"])
+        """Replace all component templates (interfaces, power, ports, module bays) in one transaction."""
+        with transaction.atomic():
+            sync_component_templates(module_type, module_data, "module_type", self.logger, debug_mode)
 
     def _slugify(self, value):
         """Convert a string to a URL-friendly slug."""

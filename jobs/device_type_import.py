@@ -11,11 +11,9 @@ import os
 import yaml
 import re
 import shutil
-from nautobot.dcim.models import (
-    Manufacturer, DeviceType, InterfaceTemplate, ConsolePortTemplate, ConsoleServerPortTemplate,
-    PowerPortTemplate, PowerOutletTemplate, FrontPortTemplate, RearPortTemplate,
-    DeviceBay
-)
+from nautobot.dcim.models import Manufacturer, DeviceType
+
+from .component_sync import sync_component_templates
 from nautobot.extras.models import ImageAttachment
 from django.core.files.base import File
 from django.core.files.images import ImageFile
@@ -172,42 +170,9 @@ class SyncDeviceTypes(Job):
                     except Exception as img_err:
                         self.logger.warning(f"Images not attached for {device_data['manufacturer']} {device_data['model']}: {img_err}")
 
-                # Helper function to process components safely
-                def process_component(component_list, component_model, fields, fk_field="device_type", parent_field="device_type_id", parent_value=None, defaults=None):
-                    """Generic function to process different device components"""
-                    if defaults is None:
-                        defaults = {}
-                    filter_kwargs = {fk_field: device_type}
-                    component_model.objects.filter(**filter_kwargs).delete()
-                    for item in device_data.get(component_list, []):
-                        valid_data = {field: item.get(field, None) for field in fields if field in item}
-                        # Apply defaults for missing fields
-                        for field, default_value in defaults.items():
-                            if field not in valid_data or valid_data[field] is None:
-                                valid_data[field] = default_value
-                        if parent_value:
-                            valid_data[parent_field] = parent_value
-                        valid_data[fk_field] = device_type
-                        # Filter out any fields that are not in the fields list or defaults to avoid keyword argument errors
-                        allowed_fields = fields + [fk_field] + list(defaults.keys())
-                        filtered_data = {k: v for k, v in valid_data.items() if k in allowed_fields}
-                        
-                        # Create the component object
-                        component_model.objects.create(**filtered_data)
-                    self.logger.info(f"Checked {component_list} for {device_data['model']}.")
-
-
-                # Define valid fields for each model with the correct foreign key
-                process_component("interfaces", InterfaceTemplate, ["name", "type", "label", "description", "mgmt_only"])
-                process_component("console-ports", ConsolePortTemplate, ["name", "type", "label", "description"])
-                process_component("console-server-ports", ConsoleServerPortTemplate, ["name", "type", "label", "description"])
-                # PowerPortTemplate disabled due to power_factor constraint issues
-                # process_component("power-ports", PowerPortTemplate, ["name", "type", "maximum_draw", "allocated_draw", "power_factor"], defaults={"power_factor": 1.0})
-                process_component("power-outlets", PowerOutletTemplate, ["name", "type", "power_port", "feed_leg", "label", "description"])
-                process_component("front-ports", FrontPortTemplate, ["name", "type", "rear_port", "rear_port_position", "label", "description"])
-                process_component("rear-ports", RearPortTemplate, ["name", "type", "positions", "label", "description"])
-                # process_component("module-bays", ModuleBay, ["name", "position"], fk_field="name", parent_field="device_type_id", parent_value=device_type.id)
-                process_component("device-bays", DeviceBay, ["name", "label", "description"], fk_field="name", parent_field="device_type", parent_value=device_type)
+                # Replace all component templates (interfaces, power, ports, bays) in one transaction
+                with transaction.atomic():
+                    sync_component_templates(device_type, device_data, "device_type", self.logger, debug_mode)
 
 
                 self.logger.info(f"Imported device type: {device_data['model']} (Created: {created})")
