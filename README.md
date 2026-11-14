@@ -81,6 +81,31 @@ Suppose you want to import only Cisco Catalyst 9300 device-types:
 ![Device Types Imported](docs/images/imported_device_example.png)
 *Imported device-types now available in Nautobot.*
 
+## Running the jobs from a script (REST API)
+
+[`scripts/nautobot_sync.py`](scripts/nautobot_sync.py) runs the **Sync Device Types** and **Sync Module Types** jobs through the Nautobot REST API, waits for them to finish and prints any warnings or errors from the job log. It only uses the Python standard library.
+
+The jobs must already be loaded from this Git repository and enabled. The token's user needs permission to run jobs.
+
+```bash
+export NAUTOBOT_URL=https://nautobot.example.com
+export NAUTOBOT_TOKEN=xxxxxxxx
+
+# Dry-run (default): show what would be imported
+python3 scripts/nautobot_sync.py device --manufacturer Cisco --filter 9300
+
+# Import for real, with elevation images
+python3 scripts/nautobot_sync.py device --manufacturer Cisco --filter 9300 --commit --images
+
+# Several manufacturers, one job run each (avoids the job time limit)
+python3 scripts/nautobot_sync.py device -m Cisco -m Juniper -m Arista --commit
+
+# Every module-types manufacturer folder
+python3 scripts/nautobot_sync.py module --all-manufacturers --commit
+```
+
+The exit code is `1` if any run failed or logged an error, so the script can be used in CI or cron. Run `python3 scripts/nautobot_sync.py --help` for all options.
+
 ## Library Statistics
 
 - **Device Types**: 4,410 YAML files
