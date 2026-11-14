@@ -1,0 +1,37 @@
+---
+manufacturer: Panduit
+model: Opticom Rack Mount Enclosure, Black, 4 RU, 12 FAP/Cassette Slots
+slug: panduit-frme4
+part_number: FRME4
+u_height: 4
+is_full_depth: false
+subdevice_role: parent
+is_powered: false
+airflow: passive
+weight: 6.57
+weight_unit: kg
+module-bays:
+  - name: A
+    position: A
+  - name: B
+    position: B
+  - name: C
+    position: C
+  - name: D
+    position: D
+  - name: E
+    position: E
+  - name: F
+    position: F
+  - name: G
+    position: G
+  - name: H
+    position: H
+  - name: J
+    position: J
+  - name: K
+    position: K
+  - name: L
+    position: L
+  - name: M
+    position: M
