@@ -8,7 +8,6 @@ airflow: passive
 is_powered: false
 u_height: 1
 is_full_depth: false
-front_image: true
 module-bays:
   - name: '1'
     position: '1'

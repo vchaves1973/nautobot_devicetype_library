@@ -1,6 +1,7 @@
 ---
 manufacturer: Juniper
 model: MX104-BASE
+slug: juniper-mx104-base
 is_full_depth: false
 u_height: 4
 interfaces:

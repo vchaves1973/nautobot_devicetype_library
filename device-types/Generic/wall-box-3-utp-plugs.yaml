@@ -8,13 +8,16 @@ is_powered: false
 front-ports:
   - name: Port 1
     type: 8p8c
-    positions: 1
+    rear_port: Port 1
+    rear_port_position: 1
   - name: Port 2
     type: 8p8c
-    positions: 1
+    rear_port: Port 2
+    rear_port_position: 1
   - name: Port 3
     type: 8p8c
-    positions: 1
+    rear_port: Port 3
+    rear_port_position: 1
 rear-ports:
   - name: Port 1
     type: 8p8c
@@ -25,16 +28,3 @@ rear-ports:
   - name: Port 3
     type: 8p8c
     positions: 1
-port-mappings:
-  - front_port: Port 1
-    front_port_position: 1
-    rear_port: Port 1
-    rear_port_position: 1
-  - front_port: Port 2
-    front_port_position: 1
-    rear_port: Port 2
-    rear_port_position: 1
-  - front_port: Port 3
-    front_port_position: 1
-    rear_port: Port 3
-    rear_port_position: 1

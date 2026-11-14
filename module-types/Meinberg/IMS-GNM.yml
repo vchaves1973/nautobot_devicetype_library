@@ -10,4 +10,3 @@ console-ports:
 rear-ports:
   - name: Antenna
     type: bnc
-    positions: 1

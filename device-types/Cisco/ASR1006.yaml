@@ -5,24 +5,15 @@ slug: cisco-asr1006
 part_number: ASR1006
 u_height: 6
 is_full_depth: true
-front_image: true
-rear_image: true
-module-bays:
-  - name: Slot 1
-    position: '1'
-  - name: Slot 2
-    position: '2'
-  - name: Slot 3
-    position: '3'
-  - name: Slot RP1
-    position: RP1
-  - name: Slot RP2
-    position: RP2
-  - name: Slot ESP1
-    position: ESP1
-  - name: Slot ESP2
-    position: ESP2
+console-ports:
+  - name: Con 0
+    type: rj-45
+  - name: Con 1
+    type: rj-45
+power-ports:
   - name: PS1
-    position: '1'
+    type: iec-60320-c14
+    maximum_draw: 1600
   - name: PS2
-    position: '2'
+    type: iec-60320-c14
+    maximum_draw: 1600

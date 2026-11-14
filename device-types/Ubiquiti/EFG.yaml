@@ -15,8 +15,6 @@ comments: |
 
 u_height: 1
 is_full_depth: false
-weight: 6.5
-weight_unit: kg
 airflow: front-to-rear
 front_image: true
 rear_image: true

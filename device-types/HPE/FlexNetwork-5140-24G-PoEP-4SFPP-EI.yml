@@ -13,9 +13,8 @@ console-ports:
   - name: console
     type: rj-45
 power-ports:
-  - name: PSU
+  - name: PSU1
     type: iec-60320-c14
-    allocated_draw: 30
     maximum_draw: 451
 interfaces:
   - name: GigabitEthernet1/0/1

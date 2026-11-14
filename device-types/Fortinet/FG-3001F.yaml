@@ -63,21 +63,21 @@ interfaces:
   - name: port16
     type: 10gbase-t
   - name: port17
-    type: 25gbase-x-sfp28
+    type: 10gbase-x-sfpp
   - name: port18
-    type: 25gbase-x-sfp28
+    type: 10gbase-x-sfpp
   - name: port19
-    type: 25gbase-x-sfp28
+    type: 10gbase-x-sfpp
   - name: port20
-    type: 25gbase-x-sfp28
+    type: 10gbase-x-sfpp
   - name: port21
-    type: 25gbase-x-sfp28
+    type: 10gbase-x-sfpp
   - name: port22
-    type: 25gbase-x-sfp28
+    type: 10gbase-x-sfpp
   - name: port23
-    type: 25gbase-x-sfp28
+    type: 10gbase-x-sfpp
   - name: port24
-    type: 25gbase-x-sfp28
+    type: 10gbase-x-sfpp
   - name: port25
     type: 25gbase-x-sfp28
   - name: port26

@@ -21,21 +21,21 @@ interfaces:
     type: 1000base-t
   - name: DMZ-SFP
     type: 1000base-x-sfp
-  - name: LAN1
+  - name: '1'
     type: 1000base-t
-  - name: LAN2
+  - name: '2'
     type: 1000base-t
-  - name: LAN3
+  - name: '3'
     type: 1000base-t
-  - name: LAN4
+  - name: '4'
     type: 1000base-t
-  - name: LAN5
+  - name: '5'
     type: 1000base-t
-  - name: LAN6
+  - name: '6'
     type: 1000base-t
-  - name: LAN7
+  - name: '7'
     type: 1000base-t
-  - name: LAN8
+  - name: '8'
     type: 1000base-t
   - name: WAN
     type: 1000base-t

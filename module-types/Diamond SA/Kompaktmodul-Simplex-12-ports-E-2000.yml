@@ -6,90 +6,53 @@ comments: '[DIAMOND LWL Passive Komponenten](https://shop.diamond.de/Input/Daten
 front-ports:
   - name: Port 1
     type: lc
-    positions: 1
+    rear_port: '{module}1-12'
+    rear_port_position: 1
   - name: Port 2
     type: lc
-    positions: 1
+    rear_port: '{module}1-12'
+    rear_port_position: 2
   - name: Port 3
     type: lc
-    positions: 1
+    rear_port: '{module}1-12'
+    rear_port_position: 3
   - name: Port 4
     type: lc
-    positions: 1
+    rear_port: '{module}1-12'
+    rear_port_position: 4
   - name: Port 5
     type: lc
-    positions: 1
+    rear_port: '{module}1-12'
+    rear_port_position: 5
   - name: Port 6
     type: lc
-    positions: 1
+    rear_port: '{module}1-12'
+    rear_port_position: 6
   - name: Port 7
     type: lc
-    positions: 1
+    rear_port: '{module}1-12'
+    rear_port_position: 7
   - name: Port 8
     type: lc
-    positions: 1
+    rear_port: '{module}1-12'
+    rear_port_position: 8
   - name: Port 9
     type: lc
-    positions: 1
+    rear_port: '{module}1-12'
+    rear_port_position: 9
   - name: Port 10
     type: lc
-    positions: 1
+    rear_port: '{module}1-12'
+    rear_port_position: 10
   - name: Port 11
     type: lc
-    positions: 1
+    rear_port: '{module}1-12'
+    rear_port_position: 11
   - name: Port 12
     type: lc
-    positions: 1
+    rear_port: '{module}1-12'
+    rear_port_position: 12
 rear-ports:
   - name: '{module}1-12'
     type: mpo
     positions: 12
-port-mappings:
-  - front_port: Port 1
-    front_port_position: 1
-    rear_port: '{module}1-12'
-    rear_port_position: 1
-  - front_port: Port 2
-    front_port_position: 1
-    rear_port: '{module}1-12'
-    rear_port_position: 2
-  - front_port: Port 3
-    front_port_position: 1
-    rear_port: '{module}1-12'
-    rear_port_position: 3
-  - front_port: Port 4
-    front_port_position: 1
-    rear_port: '{module}1-12'
-    rear_port_position: 4
-  - front_port: Port 5
-    front_port_position: 1
-    rear_port: '{module}1-12'
-    rear_port_position: 5
-  - front_port: Port 6
-    front_port_position: 1
-    rear_port: '{module}1-12'
-    rear_port_position: 6
-  - front_port: Port 7
-    front_port_position: 1
-    rear_port: '{module}1-12'
-    rear_port_position: 7
-  - front_port: Port 8
-    front_port_position: 1
-    rear_port: '{module}1-12'
-    rear_port_position: 8
-  - front_port: Port 9
-    front_port_position: 1
-    rear_port: '{module}1-12'
-    rear_port_position: 9
-  - front_port: Port 10
-    front_port_position: 1
-    rear_port: '{module}1-12'
-    rear_port_position: 10
-  - front_port: Port 11
-    front_port_position: 1
-    rear_port: '{module}1-12'
-    rear_port_position: 11
-  - front_port: Port 12
-    front_port_position: 1
-    rear_port: '{module}1-12'
-    rear_port_position: 12

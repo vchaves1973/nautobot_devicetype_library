@@ -15,10 +15,13 @@ module-bays:
     position: '2'
   - name: Expansion Module
     position: '1'
-  - name: Fan 1
-    position: '1'
-  - name: Fan 2
-    position: '2'
+inventory-items:
+  - name: Storage-Module
+    manufacturer: SonicWall
+  - name: Fan-Module 1
+    manufacturer: SonicWall
+  - name: Fan-Module 2
+    manufacturer: SonicWall
 interfaces:
   - name: MGMT
     type: 1000base-t

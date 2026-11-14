@@ -74,13 +74,13 @@ interfaces:
     type: 1000base-x-sfp
   - name: '32'
     type: 1000base-x-sfp
-  - name: SFP+ 33
+  - name: SPF+ 33
     type: 10gbase-x-sfpp
-  - name: SFP+ 34
+  - name: SPF+ 34
     type: 10gbase-x-sfpp
-  - name: SFP+ 35
+  - name: SPF+ 35
     type: 10gbase-x-sfpp
-  - name: SFP+ 36
+  - name: SPF+ 36
     type: 10gbase-x-sfpp
   - name: Hardware Stack Port 1
     type: 40gbase-x-qsfpp

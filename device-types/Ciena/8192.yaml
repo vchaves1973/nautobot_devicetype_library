@@ -14,10 +14,10 @@ console-ports:
     type: usb-c
   - name: USB
     type: usb-c
-  - name: 1PPS / 10MHZ A
+  - name: 1PPS / 10MHz A
     description: Mini SMB interface for 1PPS/ToD in/out (software selectable)
     type: other
-  - name: 1PPS / 10MHZ B
+  - name: 1PPS / 10MHz B
     description: Mini SMB interface for 1PPS/ToD in/out (software selectable)
     type: other
   - name: ANT
@@ -46,45 +46,45 @@ interfaces:
     type: 1000base-t
     mgmt_only: true
   - name: '1'
-    type: 400gbase-x-qsfp112
+    type: 400gbase-x-qsfpdd
   - name: '2'
-    type: 400gbase-x-qsfp112
+    type: 400gbase-x-qsfpdd
   - name: '3'
-    type: 400gbase-x-qsfp112
+    type: 400gbase-x-qsfpdd
   - name: '4'
-    type: 400gbase-x-qsfp112
+    type: 400gbase-x-qsfpdd
   - name: '5'
-    type: 400gbase-x-qsfp112
+    type: 400gbase-x-qsfpdd
   - name: '6'
-    type: 400gbase-x-qsfp112
+    type: 400gbase-x-qsfpdd
   - name: '7'
-    type: 400gbase-x-qsfp112
+    type: 400gbase-x-qsfpdd
   - name: '8'
-    type: 400gbase-x-qsfp112
+    type: 400gbase-x-qsfpdd
   - name: '9'
-    type: 400gbase-x-qsfp112
+    type: 400gbase-x-qsfpdd
   - name: '10'
-    type: 400gbase-x-qsfp112
+    type: 400gbase-x-qsfpdd
   - name: '11'
-    type: 400gbase-x-qsfp112
+    type: 400gbase-x-qsfpdd
   - name: '12'
-    type: 400gbase-x-qsfp112
+    type: 400gbase-x-qsfpdd
   - name: '13'
-    type: 400gbase-x-qsfp112
+    type: 400gbase-x-qsfpdd
   - name: '14'
-    type: 400gbase-x-qsfp112
+    type: 400gbase-x-qsfpdd
   - name: '15'
-    type: 400gbase-x-qsfp112
+    type: 400gbase-x-qsfpdd
   - name: '16'
-    type: 400gbase-x-qsfp112
+    type: 400gbase-x-qsfpdd
   - name: '17'
-    type: 400gbase-x-qsfp112
+    type: 400gbase-x-qsfpdd
   - name: '18'
-    type: 400gbase-x-qsfp112
+    type: 400gbase-x-qsfpdd
   - name: '19'
-    type: 400gbase-x-qsfp112
+    type: 400gbase-x-qsfpdd
   - name: '20'
-    type: 400gbase-x-qsfp112
+    type: 400gbase-x-qsfpdd
   - name: '21'
     type: 400gbase-x-qsfpdd
   - name: '22'
@@ -117,6 +117,7 @@ interfaces:
     type: 400gbase-x-qsfpdd
   - name: '36'
     type: 400gbase-x-qsfpdd
+
 module-bays:
   - name: PS A
     position: A

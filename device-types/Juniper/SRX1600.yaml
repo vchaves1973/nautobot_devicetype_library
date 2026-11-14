@@ -53,17 +53,17 @@ interfaces:
     type: 1000base-t
   - name: ge-0/0/15
     type: 1000base-t
-  - name: et-0/1/0
+  - name: et-0/1/16
     type: 25gbase-x-sfp28
-  - name: et-0/1/1
+  - name: et-0/1/17
     type: 25gbase-x-sfp28
-  - name: xe-0/2/0
+  - name: xe-0/2/18
     type: 10gbase-x-sfpp
-  - name: xe-0/2/1
+  - name: xe-0/2/19
     type: 10gbase-x-sfpp
-  - name: xe-0/2/2
+  - name: xe-0/2/20
     type: 10gbase-x-sfpp
-  - name: xe-0/2/3
+  - name: xe-0/2/21
     type: 10gbase-x-sfpp
 module-bays:
   - name: PSU 0

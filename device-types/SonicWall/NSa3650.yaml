@@ -15,6 +15,9 @@ module-bays:
     position: '2'
   - name: Expansion Module
     position: '1'
+inventory-items:
+  - name: Storage-Module
+    manufacturer: SonicWall
 interfaces:
   - name: MGMT
     type: 1000base-t

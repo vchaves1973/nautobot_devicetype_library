@@ -214,5 +214,7 @@ module-bays:
     position: A
   - name: PSU B
     position: B
-  - name: Fan A
-    position: A
+inventory-items:
+  - name: Fan-Module
+    manufacturer: Allied Telesis
+    part_id: AT-FAN10

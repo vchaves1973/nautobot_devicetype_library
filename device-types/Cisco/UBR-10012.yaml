@@ -4,8 +4,6 @@ model: uBR 10012
 slug: cisco-ubr-10012
 u_height: 18
 is_full_depth: true
-front_image: true
-rear_image: true
 comments: '[Cisco uBR10012 Data Sheet](https://www.cisco.com/c/en/us/products/collateral/video/ubr10000-series-universal-broadband-routers/product_data_sheet09186a00801ed384.html)'
 module-bays:
   - name: uplink-slot1
@@ -33,14 +31,14 @@ module-bays:
   - name: rf-slot12
     position: '12'
   - name: power-slot1
-    position: '1'
+    position: PSU1
   - name: power-slot2
-    position: '2'
+    position: PSU2
   - name: pfe-slot1
-    position: '1'
+    position: PFE1
   - name: pfe-slot2
-    position: '2'
+    position: PFE2
   - name: timing-slot1
-    position: '1'
+    position: timing1
   - name: timing-slot2
-    position: '2'
+    position: timing2

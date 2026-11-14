@@ -14,7 +14,7 @@ console-ports:
     type: rj-45
   - name: USB
     type: usb-a
-  - name: 1PPS
+  - name: 1PPS / 10MHZ
     description: 1PPS / G.703 ToD port in or out (software selectable). SMB connector
     type: other
   - name: CLK
@@ -26,12 +26,6 @@ console-ports:
   - name: BITS
     type: rj-45
     description: RJ-45 BITS in or out, ToD in or out, or 1PPS in or out (software selectable).
-  - name: ANT
-    type: other
-    description: SMB connector (50 ohm) GPS antenna port
-  - name: ALARMS
-    type: other
-    description: D-sub 26-pin female alarm connector
 interfaces:
   - name: '1'
     type: 10gbase-x-sfpp
@@ -119,13 +113,27 @@ interfaces:
 module-bays:
   - name: PS A
     position: A
-    description: 170-0310-900 5171 DC or 170-0311-900 5171 AC
+    description: |
+      170-0310-900 5171, DC PLUGGABLE POWER SUPPLY, -48V
+      170-0311-900 5171, AC PLUGGABLE POWER SUPPLY, WIDE RANGE 120/240V
   - name: PS B
     position: B
-    description: 170-0310-900 5171 DC or 170-0311-900 5171 AC
+    description: |
+      170-0310-900 5171, DC PLUGGABLE POWER SUPPLY, -48V
+      170-0311-900 5171, AC PLUGGABLE POWER SUPPLY, WIDE RANGE 120/240V
   - name: Module 1
     position: '1'
-    description: 170-0312-900 2x100G QSFP28/170-0313-900 2x100G CFP2-DCO/170-0314-900 1x200G CFP2-DCO/170-0315-900 CFP2/QSFP28
+    description: |
+      Accepts:
+      * 170-0312-900 2x100G QSFP28 FRU supporting up to 100GbE
+      * 170-0313-900 2x100G CFP2-DCO FRU supporting up to 100GbE
+      * 170-0314-900 1x200G CFP2-DCO FRU supporting up to 200GbE
+      * 170-0315-900 CFP2/QSFP28 combo FRU supporting up to 100GbE
   - name: Module 2
     position: '2'
-    description: 170-0312-900 2x100G QSFP28/170-0313-900 2x100G CFP2-DCO/170-0314-900 1x200G CFP2-DCO/170-0315-900 CFP2/QSFP28
+    description: |
+      Accepts:
+      * 170-0312-900 2x100G QSFP28 FRU supporting up to 100GbE
+      * 170-0313-900 2x100G CFP2-DCO FRU supporting up to 100GbE
+      * 170-0314-900 1x200G CFP2-DCO FRU supporting up to 200GbE
+      * 170-0315-900 CFP2/QSFP28 combo FRU supporting up to 100GbE

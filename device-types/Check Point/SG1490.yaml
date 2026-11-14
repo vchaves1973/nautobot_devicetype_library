@@ -23,52 +23,52 @@ interfaces:
     type: 1000base-x-sfp
   - name: WAN
     type: 1000base-t
-  - name: LAN1
+  - name: eth1
     label: '1'
     type: 1000base-t
-  - name: LAN2
+  - name: eth2
     label: '2'
     type: 1000base-t
-  - name: LAN3
+  - name: eth3
     label: '3'
     type: 1000base-t
-  - name: LAN4
+  - name: eth4
     label: '4'
     type: 1000base-t
-  - name: LAN5
+  - name: eth5
     label: '5'
     type: 1000base-t
-  - name: LAN6
+  - name: eth6
     label: '6'
     type: 1000base-t
-  - name: LAN7
+  - name: eth7
     label: '7'
     type: 1000base-t
-  - name: LAN8
+  - name: eth8
     label: '8'
     type: 1000base-t
-  - name: LAN9
+  - name: eth9
     label: '9'
     type: 1000base-t
-  - name: LAN10
+  - name: eth10
     label: '10'
     type: 1000base-t
-  - name: LAN11
+  - name: eth11
     label: '11'
     type: 1000base-t
-  - name: LAN12
+  - name: eth12
     label: '12'
     type: 1000base-t
-  - name: LAN13
+  - name: eth13
     label: '13'
     type: 1000base-t
-  - name: LAN14
+  - name: eth14
     label: '14'
     type: 1000base-t
-  - name: LAN15
+  - name: eth15
     label: '15'
     type: 1000base-t
-  - name: LAN16
+  - name: eth16
     label: '16'
     type: 1000base-t
 power-ports:

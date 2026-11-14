@@ -8,13 +8,12 @@ is_full_depth: false
 weight: 7
 weight_unit: kg
 airflow: front-to-rear
-front_image: true
 console-ports:
   - name: CONSOLE
     type: usb-c
   - name: USB
     type: usb-c
-  - name: 1PPS / 10MHZ
+  - name: 1 PPS/10 MHz
     type: other
   - name: ANT
     type: other
@@ -105,11 +104,11 @@ interfaces:
   - name: '40'
     type: 400gbase-x-qsfpdd
 power-ports:
-  - name: PS-A
+  - name: PSA
     type: dc-terminal
     maximum_draw: 400
     allocated_draw: 240
-  - name: PS-B
+  - name: PSB
     type: dc-terminal
     maximum_draw: 400
     allocated_draw: 240

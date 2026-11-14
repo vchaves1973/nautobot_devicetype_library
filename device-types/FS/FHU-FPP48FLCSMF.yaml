@@ -10,40 +10,52 @@ is_powered: false
 front-ports:
   - name: Front Port 1
     type: lc
-    positions: 1
+    rear_port: Rear Port 1
+    rear_port_position: 1
   - name: Front Port 2
     type: lc
-    positions: 1
+    rear_port: Rear Port 2
+    rear_port_position: 1
   - name: Front Port 3
     type: lc
-    positions: 1
+    rear_port: Rear Port 3
+    rear_port_position: 1
   - name: Front Port 4
     type: lc
-    positions: 1
+    rear_port: Rear Port 4
+    rear_port_position: 1
   - name: Front Port 5
     type: lc
-    positions: 1
+    rear_port: Rear Port 5
+    rear_port_position: 1
   - name: Front Port 6
     type: lc
-    positions: 1
+    rear_port: Rear Port 6
+    rear_port_position: 1
   - name: Front Port 7
     type: lc
-    positions: 1
+    rear_port: Rear Port 7
+    rear_port_position: 1
   - name: Front Port 8
     type: lc
-    positions: 1
+    rear_port: Rear Port 8
+    rear_port_position: 1
   - name: Front Port 9
     type: lc
-    positions: 1
+    rear_port: Rear Port 9
+    rear_port_position: 1
   - name: Front Port 10
     type: lc
-    positions: 1
+    rear_port: Rear Port 10
+    rear_port_position: 1
   - name: Front Port 11
     type: lc
-    positions: 1
+    rear_port: Rear Port 11
+    rear_port_position: 1
   - name: Front Port 12
     type: lc
-    positions: 1
+    rear_port: Rear Port 12
+    rear_port_position: 1
 rear-ports:
   - name: Rear Port 1
     type: lc
@@ -81,52 +93,3 @@ rear-ports:
   - name: Rear Port 12
     type: lc
     positions: 1
-port-mappings:
-  - front_port: Front Port 1
-    front_port_position: 1
-    rear_port: Rear Port 1
-    rear_port_position: 1
-  - front_port: Front Port 2
-    front_port_position: 1
-    rear_port: Rear Port 2
-    rear_port_position: 1
-  - front_port: Front Port 3
-    front_port_position: 1
-    rear_port: Rear Port 3
-    rear_port_position: 1
-  - front_port: Front Port 4
-    front_port_position: 1
-    rear_port: Rear Port 4
-    rear_port_position: 1
-  - front_port: Front Port 5
-    front_port_position: 1
-    rear_port: Rear Port 5
-    rear_port_position: 1
-  - front_port: Front Port 6
-    front_port_position: 1
-    rear_port: Rear Port 6
-    rear_port_position: 1
-  - front_port: Front Port 7
-    front_port_position: 1
-    rear_port: Rear Port 7
-    rear_port_position: 1
-  - front_port: Front Port 8
-    front_port_position: 1
-    rear_port: Rear Port 8
-    rear_port_position: 1
-  - front_port: Front Port 9
-    front_port_position: 1
-    rear_port: Rear Port 9
-    rear_port_position: 1
-  - front_port: Front Port 10
-    front_port_position: 1
-    rear_port: Rear Port 10
-    rear_port_position: 1
-  - front_port: Front Port 11
-    front_port_position: 1
-    rear_port: Rear Port 11
-    rear_port_position: 1
-  - front_port: Front Port 12
-    front_port_position: 1
-    rear_port: Rear Port 12
-    rear_port_position: 1

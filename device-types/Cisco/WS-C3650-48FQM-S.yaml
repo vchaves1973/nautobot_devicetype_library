@@ -11,11 +11,13 @@ comments: IP Base feature set
 console-ports:
   - name: con 0
     type: rj-45
-module-bays:
+power-ports:
+  - name: PSU0
+    type: iec-60320-c16
+    maximum_draw: 975
   - name: PSU1
-    position: '1'
-  - name: PSU2
-    position: '2'
+    type: iec-60320-c16
+    maximum_draw: 975
 interfaces:
   - name: GigabitEthernet0/0
     type: 1000base-t

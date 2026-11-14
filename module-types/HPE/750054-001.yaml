@@ -1,9 +1,0 @@
----
-manufacturer: HPE
-model: HPE Smart HBA H241
-part_number: 750054-001
-interfaces:
-  - name: '{module}/SAS 1'
-    type: other
-  - name: '{module}/SAS 2'
-    type: other
