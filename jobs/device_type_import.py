@@ -91,7 +91,8 @@ class SyncDeviceTypes(Job):
             for file in files:
                 if file.endswith(".yaml"):
                     full_path = os.path.join(root, file)
-                    if manufacturer and manufacturer not in root:
+                    # Exact folder match: a substring test made "HP" also pick up "HPE"
+                    if manufacturer and os.path.relpath(root, DEVICE_TYPE_PATH).split(os.sep)[0] != manufacturer:
                         continue  # Skip files not belonging to the selected manufacturer
                     if text_filter:
                         regex_pattern = re.compile(text_filter)
