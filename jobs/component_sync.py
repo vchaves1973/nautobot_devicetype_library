@@ -46,6 +46,7 @@ def sync_component_templates(parent, data, parent_field, logger, debug_mode=Fals
     failure does not leave a half-populated type behind.
     """
     created = {}  # section -> {name: template}, used to resolve FK references
+    mappings = _front_port_mappings(data, logger)
 
     for section, model, fields in COMPONENTS:
         if parent_field != "device_type" and section in DEVICE_ONLY:
@@ -65,12 +66,38 @@ def sync_component_templates(parent, data, parent_field, logger, debug_mode=Fals
             if section == "power-outlets" and item.get("power_port"):
                 attrs["power_port_template"] = _lookup(created, "power-ports", item["power_port"], item, data)
             if section == "front-ports":
-                attrs["rear_port_template"] = _lookup(created, "rear-ports", item["rear_port"], item, data)
+                rear_port, rear_position = item.get("rear_port"), item.get("rear_port_position")
+                if rear_port is None:  # newer NetBox format: mapping lives in port-mappings
+                    if item["name"] not in mappings:
+                        raise ValueError(f"{data['model']}: front port '{item['name']}' has no rear port mapping.")
+                    rear_port, rear_position = mappings[item["name"]]
+                attrs["rear_port_template"] = _lookup(created, "rear-ports", rear_port, item, data)
+                if rear_position is not None:
+                    attrs["rear_port_position"] = rear_position
 
             created[section][item["name"]] = model.objects.create(**attrs)
 
         if debug_mode and created[section]:
             logger.info(f"{len(created[section])} {section} synced for {data['model']}.")
+
+
+def _front_port_mappings(data, logger):
+    """Read the NetBox `port-mappings` section as {front port name: (rear port name, rear position)}.
+
+    Nautobot links each front port to a single rear port position. When NetBox maps one
+    front port to several rear positions, the first mapping is used and a warning is logged.
+    """
+    result = {}
+    for m in data.get("port-mappings") or []:
+        front = m["front_port"]
+        if front in result:
+            logger.warning(
+                f"{data['model']}: front port '{front}' has several rear mappings; "
+                f"Nautobot supports one, keeping rear port '{result[front][0]}'."
+            )
+            continue
+        result[front] = (m["rear_port"], m.get("rear_port_position"))
+    return result
 
 
 def _lookup(created, section, name, item, data):
